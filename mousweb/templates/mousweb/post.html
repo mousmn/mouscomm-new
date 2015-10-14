@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="fielddex">
+	<form action="form/submit/" method="POST">{% csrf_token %}
+	<fieldset>
+		<legend>Edit post</legend>
+		<p>Identity:<br/>
+		{{ form.identity }}</p>
+		<p>Post field:<br/>
+		{{ form.text }}</p>
+		<input type="submit" value="Submit"/>
+	</fieldset>
+	</form>
+</div>
+{% endblock %}
+
+

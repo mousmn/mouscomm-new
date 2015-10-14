@@ -1,8 +1,29 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+
+from . import forms
 
 # Create your views here.
 
-def index(request):
+def Index(request):
     return render(request, 'mousweb/index.html')
+
+def Post(request):
+    form = forms.PostForm()
+    return render(request, 'mousweb/post.html', {'form': form})
+
+def PostSubmit(request):
+    # Check if post request given else go to post creatation
+    if request.method == 'POST':
+        form = forms.PostForm(request.POST)
+        # If valid do it otherwise return
+        if form.is_valid():
+            return render(request, 'mousweb/submit.html', {'form': form})
+        else:
+            return HttpResponseRedirect('/form')
+    else:
+        return HttpResponseRedirect('/form')
+
+def Minecraft(request):
+    return render(request, 'mousweb/minecraft.html')
 

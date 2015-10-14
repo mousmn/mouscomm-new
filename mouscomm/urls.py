@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from mousweb import views
 
 urlpatterns = [
-    url(r'^$', include('mousweb.urls', namespace="mousweb")),
-    url(r'^admin/', include(admin.site.urls)),
+    #url(r'^$', include('mousweb.urls', namespace="mousweb")),
+    url(r'^$', views.Index, name='index'),
+    url(r'form/?$', views.Post, name='form'),
+    url(r'form/submit/?$', views.PostSubmit, name='submit'),
+    url(r'minecraft/?$', views.Minecraft, name='minecraft'),
+    #url(r'^admin/', include(admin.site.urls)),
 ]

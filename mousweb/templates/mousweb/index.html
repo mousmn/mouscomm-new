@@ -1,6 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-	<p>Mous</p>
+
+<header style="text-align: center;">
+	<h1>Mousmn</h1>
+	<p><i>Quiet as a mous</i></p>
+</header>
+
+<p style="text-align: center;"><img src="{% static 'mousweb/images/quietasmous.png' %}" alt="Quiet as a mous"></p>
+
+<!--<p>"Nothing currently works"</p>-->
+<!--<p>"Everything currently works"</p>-->
+<p>"Django in progress"</p>
+
 {% endblock %}
 

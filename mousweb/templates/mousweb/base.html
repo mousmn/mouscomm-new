@@ -10,11 +10,9 @@
 
 <body>
 
-<div id="menu">
-	{% block menu %}
-
-	{% endblock %}
-</div>
+{% block menu %}
+	{% include "base-menu.html" %}
+{% endblock %}
 
 
 <div id="cendex">
