@@ -1,0 +1,136 @@
+@font-face{
+	font-family: noto-serif;
+	src: url(fonts/google-noto/NotoSerif-Regular.ttf);
+}
+@font-face{
+	font-family: noto-serif;
+	src: url(fonts/google-noto/NotoSerif-Bold.ttf);
+	font-weight: bold;
+}
+@font-face{
+	font-family: noto-serif;
+	src: url(fonts/google-noto/NotoSerif-Italic.ttf);
+	font-style: italic;
+}
+
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 100%;
+}
+
+h1{
+	font-size: 2.08em;
+	margin: 0em;
+}
+
+p{
+	font-size: 0.875em;
+}
+
+body{
+	background-color: lightgray;
+	font-family: noto-serif, Times New Roman, Comic Sans MS, serif;
+}
+
+table{
+	width:100%;
+	padding-left:15px;
+}
+
+#cendex{
+	width: 70%;
+	margin:0 auto;
+	background-color: #EEEEEE;
+	/*height:100vh;*/
+	height: 100%;
+	padding: 8px;
+}
+
+.fielddex{
+	padding: 8px;
+}
+
+
+
+/*             */
+/*             */
+/* Menu styles */
+/*             */
+/*             */
+
+#menu{
+	/*margin: 5 auto;*/
+	background-color: #800000;
+	margin-top: 0;
+}
+
+ul#menu{
+	/*padding-left: 15px;*/
+	text-align: center;
+	/*padding: 0;*/
+}
+
+ul#menu li{
+	display: inline;
+}
+
+ul#menu li a{
+	display: inline-block;
+	/*background-color: #333333;*/
+	color: white;
+	/*padding: 10px 10px;*/
+	padding: 6px 10px 6px 10px;
+	/*padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;*/
+	text-decoration: none;
+	border-radius: 4px 4px 0 0;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+ul#menu li a:hover{
+	/*background-color: darkgrey;
+	color: black;*/
+	color: orange;
+}
+
+/*                */
+/* End Menu syles */
+/*                */
+
+a,a:link,a:visited{
+	color: #800000;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+table.ucpTab{
+	width: 50%;
+	border-collapse: collapse;
+	margin: auto;
+	margin-bottom: 10px;
+}
+table.ucpTab, th, td{
+	padding: 5px 10px 5px 10px;
+	border: 1px solid grey;
+}
+table.ucpTab tr:nth-child(odd){
+	background-color: #efefef;
+}
+table.ucpTab tr:nth-child(even){
+	background-color: #f7f7f7;
+}
+
