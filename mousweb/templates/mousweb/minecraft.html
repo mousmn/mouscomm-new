@@ -3,8 +3,8 @@
 {% block content %}
 
 <div style="width:75%;margin:auto;">
-	<h2 style="text-align:center;" alt="cover" title="cover">Intelligentsia Pack</h2>
-	<p><img src="{% static 'mousweb/images/cover.png' %}" style="float:right;"></p>
+	<h2 style="text-align:center;">Intelligentsia Pack</h2>
+	<p><img src="{% static 'mousweb/images/cover.png' %}" style="float:right;" alt="cover" title="cover"></p>
 	<h5>Created by Crestor123</h5>
 	<p><a href="http://www.technicpack.net/modpack/intelligentsia-pack.709976" target="_blank">Modpack</a> |
 		<a href="http://www.technicpack.net/download" target="_blank">Technic Launcher</a></p>
@@ -13,6 +13,25 @@
 	<p>Install the modpack by visiting the the link above and click INSTALL THIS MODPACK to copy the url.</p>
 	<p>In the Technic Launcher click on the MODPACKS tab and paste the url into the box 
 		that says "Add Pack or Search" with Ctrl-v or Command-v and click Install.</p>
+
+	<hr/>
+
+	<h2 style="text-align: center;">MousLan</h2>
+	<h5>Created by Mousmn</h5>
+	<p>Version: {{ mc.pack_version }}<br/>
+	   Minecraft {{ mc.mc_version }}</p>
+	<p><a href="{{ mc.download_path }}">Download</a></p>
+	<table class="ucpTab" style="width: 80%;">
+		<th>Mod</th>
+		<th>Version</th>
+		{% for mod, version in mc.mod_list %}
+		<tr>
+			<td>{{ mod }}</td>
+			<td>{{ version }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
 </div>
 {% endblock %}
 

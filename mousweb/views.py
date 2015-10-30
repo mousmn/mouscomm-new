@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from . import forms
+from . import forms, models
 
 # Create your views here.
 
@@ -25,5 +25,7 @@ def PostSubmit(request):
         return HttpResponseRedirect('/form')
 
 def Minecraft(request):
-    return render(request, 'mousweb/minecraft.html')
+    mc = models.mc_table_model()
+    context = {'mc': mc,}
+    return render(request, 'mousweb/minecraft.html', context)
 
