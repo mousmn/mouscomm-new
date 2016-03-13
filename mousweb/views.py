@@ -29,3 +29,18 @@ def Minecraft(request):
     context = {'mc': mc,}
     return render(request, 'mousweb/minecraft.html', context)
 
+def DevNullUp(request):
+    devup = forms.DevNullForm()
+    context = {'devup': devup,}
+    if request.method == 'POST':
+        devup = forms.DevNullForm(request.POST, request.FILES)
+        if devup.is_valid():
+            devnull = models.DevNullHandle(request.FILES['upload'])
+            return render(request, 'mousweb/devnull.html', context)
+
+    else:
+        return render(request, 'mousweb/devnullup.html', context)
+
+
+
+

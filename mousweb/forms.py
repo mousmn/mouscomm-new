@@ -7,3 +7,6 @@ class PostForm(forms.Form):
     # Make identity field autofocus
     identity.widget.attrs.update({'autofocus': 'autofocus'})
 
+class DevNullForm(forms.Form):
+    upload = forms.FileField()
+
